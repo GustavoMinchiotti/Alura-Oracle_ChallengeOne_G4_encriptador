@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador #challengeonecodificador4</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+    <!-- Es el símbolo de exclamación utilizado en el archivo Figma misma fuente -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+
+<!-- /** 
+*? creo son 3 div:  
+*?   1) el header con el logo Alura 
+*?   2) main con: area texto párrafo aviso mas los 2 botones 
+*?   3) cuadro de resultado con imagen sin texto y luego text mas boton copiar dentro.
+*?   Atender a los 3 tipos según medidas  
+**/ -->
+
+
+<body>
+
+    <header>
+        <h1> <!-- va a ocupar el 84% del ancho similar al modelo Figma -->
+            <img src="/img/LogoCuadrado.png" alt="Logotipo Alura LATAM" class="logoAlura">
+        </h1>
+    </header>
+
+    <main class="flex-container">
+        <section class="texBotones">
+
+            <textarea name="texto_para_procesar" id="procesar" placeholder="Ingrese el texto aquí"></textarea>
+            <!-- col= ancho en letras // rows= renglones -->
+            <p><iconify-icon icon="bi:exclamation-circle-fill"></iconify-icon> Solo letras minúsculas y sin acentos</p>
+
+            <button>Encriptar</button> <!-- ver detalles de colors luego -->
+            <button>Desencriptar</button>
+
+        </section>
+
+        <section class="resultado">
+            <div class="resultado-texto">
+                <textarea name="respuesta" id="respuesta"></textarea>
+            </div>
+            <div class="resultado-button">
+                <button>Copiar</button>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <a href=" #">Github</a>
+        <a href="#">LinkedIn</a>
+    </footer>
+</body>
+
+</html>

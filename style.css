@@ -1,0 +1,101 @@
+/*!   ver variables para la paleta de colores */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+html {
+  background-color: rgb(134, 134, 134);
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+  padding: 20px 30px;
+  border: 1px solid black;
+  background-color: rgb(196, 196, 196);
+}
+
+/* .logoAlura {
+  border: 1px solid black;
+} */
+
+.logoAlura:hover {
+  background-color: #fd8c0250; /* Mismo color que la sombra para un efecto de relleno --  el último parámetro de valor 50 es una transparencia*/
+  border-radius: 40px;
+  box-shadow: -1px -1px 10px 1px #fd8c02;
+}
+
+main {
+  padding: 10px 20px;
+  border: 1px solid rgb(109, 16, 16);
+}
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(26, 94, 161);
+}
+main p {
+  font-size: 12px;
+  margin-top: 3em;
+}
+
+main .texBotones {
+  border: 1px solid rgb(255, 0, 242);
+  min-height: 80%;
+  align-content: flex-end;
+}
+#procesar {
+  width: 95%;
+  height: 60vh;
+  margin: 20px;
+  /* dentro del text area */
+  font-size: 2.2em;
+  background-color: rgb(127, 177, 160);
+}
+
+
+/* tamaño ubicación toda el area de respuesta //texto y botón*/
+main .resultado {
+  border: 2px solid rgb(231, 227, 0);
+  border-radius: 20px;
+  margin-left: 3vw;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
+/*div contenedor del text area para centrar y redondear*/
+.resultado-texto {
+  border: 2px solid rgb(20, 11, 59);
+  height: 85%;
+  width: 95%;
+  border-radius: 20px;
+  display: flex;
+}
+
+/* tamaño y ubicación text area respuesta*/
+#respuesta{
+  width: 98%;
+  height: 93%;
+  margin: auto;
+}
+
+button {
+  width: 328px;
+  height: 67px;
+  border-radius: 24px;
+  padding: 24px;
+  gap: 8px;
+  font-size: large;
+}
+
+footer {
+  border: 1px solid rgb(109, 16, 16);
+  height: 5rem;
+  /* background-image: url(/img/libros-viejos-230813.jpg); */
+  text-align: center;
+  font-size: 2em;
+  font-weight: 700;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  text-decoration: none;
+}
