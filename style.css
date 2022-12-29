@@ -65,7 +65,7 @@ main .resultado {
   align-items: center;
 }
 
-/*div contenedor del text area para centrar y redondear*/
+/*? div contenedor del text area para centrar y redondear*/
 .resultado-texto {
   border: 2px solid rgb(20, 11, 59);
   height: 85%;
@@ -83,6 +83,7 @@ main .resultado {
   background-position: center center;
   background-repeat: no-repeat;
 }
+
 
 button {
   width: 328px;
@@ -109,10 +110,62 @@ footer {
   font-family: "Montserrat", sans-serif;
 }
 
-/*? 768 * 1174 tablet*/
-@media only screen and (min-width: 768) {
+
+/*! 768 * 1174 tablet*/
+
+@media only screen and (max-width: 768px) {
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(72, 92, 66);
+  }
+  
+  main .texBotones {
+    border: 2px solid rgb(0, 0, 0);
+    min-height: 80%;
+  }
+  .botones {
+    border: 2px solid rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+  }
+
+  /* section respuesta */
+  /** ver en Js como borrar el botón cuando no haya texto*/
+
+  main .resultado {
+    min-height: 190px;
+    margin-left: 0;
+  }
+  .resultado-texto {
+    border: 2px solid rgb(255, 3, 221);
+    padding: 5px 0px;
+    min-height: 170px;
+    width: 95%;
+    border-radius: 20px;
+    display: flex;
+  }
+  
+  /* tamaño y ubicación text area respuesta*/
+  #respuesta {  /*? este es el text area*/
+    width: 98%;
+    min-height: inherit;
+    margin: auto;
+    background-image: none;
+  }
+
+
   footer {
-    background-color: rgb(252, 0, 0);
+    display: none;
   }
 }
-/*? 375 * 933 celu*/
+
+
+
+/*! 375 * 933 celu*/
+@media only screen and (max-width: 400px) {
+}
+
