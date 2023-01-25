@@ -36,29 +36,41 @@
     <main class="flex-container">
         <section class="texBotones">
 
-            <textarea name="texto_para_procesar" id="procesar" placeholder="Ingrese el texto aquí"></textarea>
+            <textarea class="text-Area" name="texto_para_procesar" id="procesar" placeholder="Ingrese el texto aquí" autofocus></textarea>
             <!-- col= ancho en letras // rows= renglones -->
             <p><iconify-icon icon="bi:exclamation-circle-fill"></iconify-icon> Solo letras minúsculas y sin acentos</p>
             <div class="botones">
-                <button>Encriptar</button> <!-- ver detalles de colors luego -->
-                <button>Desencriptar</button>
+                <button class="btn" id="encriptar" onclick="btnEncriptar()">Encriptar</button> <!--! con el onclick llamo a la función -->
+                <button class="btn" onclick="btnDesencriptar()">Desencriptar</button>
             </div>
         </section>
+<!--? ---------------------------------------- resultado -------------------------------------------------->
+<section class="resultado">
+    <div class="resultado-texto">
+        <textarea class="respuesta" name="respuesta" id="respuesta"></textarea>
+    </div>
+    <div class="resultado-button">
+        <button class="btn" id="copiar">Copiar</button>
+    </div>
+</section>
 
-        <section class="resultado">
-            <div class="resultado-texto">
-                <textarea name="respuesta" id="respuesta"></textarea>
-            </div>
-            <div class="resultado-button">
-                <button>Copiar</button>
-            </div>
-        </section>
+</main>
 
-    </main>
+<!--? ----------------------------------------   footer   -------------------------------------------------->
+
     <footer>
-        <a href=" #">Github</a>
-        <a href="#">LinkedIn</a>
+        <div class="icons">
+            <a class="social" href=" https://github.com/GustavoMinchiotti" target="_blank" alt="github"><iconify-icon
+                    icon="simple-icons:github"></iconify-icon></a>
+            <a class="social" href=" https://www.linkedin.com/in/gustavo-minchiotti/ " target="_blank"
+                alt="LinkedIn"><iconify-icon icon="simple-icons:linkedin"></iconify-icon></a>
+        </div>
+        <div class="copy">
+            <p>Gustavo Minchiotti <iconify-icon inline icon="ri:copyright-fill"></iconify-icon> 2022</p>
+        </div>
     </footer>
+
+    <script src="main.js"></script>
 </body>
 
 </html>

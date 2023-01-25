@@ -48,6 +48,7 @@ main .texBotones {
   width: 95%;
   height: 60vh;
   margin: 20px;
+  resize: none; /* que no se pueda modificar el tamaño en version escritorio*/
   /* dentro del text area */
   font-size: 2.2em;
   background-color: rgb(127, 177, 160);
@@ -78,12 +79,17 @@ main .resultado {
 #respuesta {
   width: 98%;
   height: 93%;
+  resize: none;
   margin: auto;
-  background-image: url(/img/buscando-removebg.png);
+  background-image: url(/img/buscando.png);
   background-position: center center;
   background-repeat: no-repeat;
+  font-size: 1.5rem;
+  
+}  
+#respuesta:focus {
+  outline: none;
 }
-
 
 button {
   width: 328px;
@@ -92,24 +98,42 @@ button {
   padding: 24px;
   gap: 8px;
   font-size: large;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+button.btn:hover {
+  background-color: #4caf50;
+  transform: scale(1.015);
+  color: white;
+  opacity: 0.8;
 }
 
 footer {
   border: 1px solid rgb(109, 16, 16);
   height: 5rem;
-  /* background-image: url(/img/libros-viejos-230813.jpg); */
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  font-size: 2em;
-  font-weight: 700;
-  font-family: "Segoe UI", Tahoma, sans-serif;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 1em;
+  font-weight: 600;
   text-decoration: none;
+  color: rgb(163, 2, 2);
+}
+footer .social {
+  color: #000;
+  font-size: 2rem;
 }
 /* A CSS pseudo-element that styles the placeholder text of a form input. */
-::-webkit-input-placeholder {
+::placeholder {
   color: #464b4d;
   font-family: "Montserrat", sans-serif;
 }
-
+#procesar:focus { /* quita el recuadro en el text area */
+  outline: none;
+}
 
 /*! 768 * 1174 tablet*/
 
@@ -119,9 +143,9 @@ footer {
     flex-direction: column;
     background-color: rgb(72, 92, 66);
   }
-  
+
   main .texBotones {
-    border: 2px solid rgb(0, 0, 0);
+    border: 5px solid rgb(26, 180, 201);
     min-height: 80%;
   }
   .botones {
@@ -131,6 +155,12 @@ footer {
     flex-direction: row;
     align-content: center;
     align-items: center;
+  }
+
+  button .btn:hover {
+    transform: scale(0.3);
+    transition: 1000ms;
+    opacity: 0.5;
   }
 
   /* section respuesta */
@@ -148,24 +178,22 @@ footer {
     border-radius: 20px;
     display: flex;
   }
-  
+
   /* tamaño y ubicación text area respuesta*/
-  #respuesta {  /*? este es el text area*/
+  #respuesta {
+    /*? este es el text area*/
     width: 98%;
     min-height: inherit;
     margin: auto;
     background-image: none;
   }
 
-
   footer {
-    display: none;
+    /* display: none; */
+    width: auto;
   }
 }
-
-
 
 /*! 375 * 933 celu*/
 @media only screen and (max-width: 400px) {
 }
-
