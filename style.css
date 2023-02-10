@@ -84,9 +84,12 @@ main .resultado {
   background-image: url(/img/buscando.png);
   background-position: center center;
   background-repeat: no-repeat;
-  font-size: 1.5rem;
-  
+  font-size: 1.5rem;  
 }  
+.respuesta::placeholder {
+  text-align: center;  
+  /* justify-content: baseline; */
+}
 #respuesta:focus {
   outline: none;
 }
@@ -138,15 +141,26 @@ footer .social {
 /*! 768 * 1174 tablet*/
 
 @media only screen and (max-width: 768px) {
+  header {
+    max-width: min-content;
+  }
   .flex-container {
     display: flex;
     flex-direction: column;
     background-color: rgb(72, 92, 66);
+    max-width: max-content;
   }
 
   main .texBotones {
     border: 5px solid rgb(26, 180, 201);
     min-height: 80%;
+  }
+  #procesar {
+    display: flex;
+    margin: auto;
+    margin-bottom: 1rem;
+    justify-content: center;
+    align-items: center;
   }
   .botones {
     border: 2px solid rgb(0, 0, 0);
@@ -194,6 +208,75 @@ footer .social {
   }
 }
 
-/*! 375 * 933 celu*/
+/*! 375 * 933 celular*/
 @media only screen and (max-width: 400px) {
+  header {
+    max-width: min-content;
+  }
+
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(55, 63, 62);
+  }
+
+  main .texBotones {
+    border: 5px solid rgb(26, 180, 201);
+    min-height: 60%;
+    justify-content: center;
+    padding: 0%;
+    margin: auto;
+  }
+  #procesar {
+    display: flex;
+    margin: auto;
+    margin-bottom: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .botones {
+    border: 2px solid rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+  }
+
+  button .btn:hover {
+    transform: scale(0.3);
+    transition: 1000ms;
+    opacity: 0.5;
+  }
+
+  /* section respuesta */
+  /** ver en Js como borrar el botón cuando no haya texto*/
+
+  main .resultado {
+    min-height: 190px;
+    margin-left: 0;
+  }
+  .resultado-texto {
+    border: 2px solid rgb(255, 3, 221);
+    padding: 5px 0px;
+    min-height: 170px;
+    width: 95%;
+    border-radius: 20px;
+    display: flex;
+  }
+
+  /* tamaño y ubicación text area respuesta*/
+  #respuesta {
+    /*? este es el text area*/
+    width: 98%;
+    min-height: inherit;
+    margin: auto;
+    background-image: none;
+  }
+
+  footer {
+    /* display: none; */
+    width: auto;
+  }
 }
+
